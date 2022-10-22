@@ -1,0 +1,40 @@
+use database IPproject_test;
+
+create table pack_details(
+src varchar(10),
+dest varchar(10),
+description char(100),
+cost int,
+name varchar(10),
+id int(10) primary key);
+
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| src         | varchar(10) | YES  |     | NULL    |       |
+| dest        | varchar(10) | YES  |     | NULL    |       |
+| description | char(100)   | YES  |     | NULL    |       |
+| cost        | int         | YES  |     | NULL    |       |
+| name        | varchar(10) | YES  |     | NULL    |       |
+| id          | int         | NO   | PRI | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+
+
+create table user_list(
+first_name varchar(10),
+last_name varchar(10),
+username varchar(20) primary key,
+password varchar(20),
+active_packs varchar(120),
+type varchar(10));
+
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| first_name   | varchar(10)  | YES  |     | NULL    |       |
+| last_name    | varchar(10)  | YES  |     | NULL    |       |
+| username     | varchar(20)  | NO   | PRI | NULL    |       |
+| password     | varchar(20)  | YES  |     | NULL    |       |
+| active_packs | varchar(120) | YES  |     | NULL    |       |
+| type         | varchar(10)  | YES  |     | NULL    |       |
++--------------+--------------+------+-----+---------+-------+
