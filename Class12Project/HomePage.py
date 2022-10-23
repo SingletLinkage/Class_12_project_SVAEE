@@ -1,6 +1,7 @@
 from User import *
 from Helper import *
 import sys
+import UserProfile
 
 # each currentUser will be an object of User class. This is used to just simplify things when code grows
 currentUser = User('firstone', 'pwd')
@@ -14,12 +15,15 @@ def init(user: User):
     global currentUser
     currentUser = user
 
+    welcome()
+
 
 def welcome():
-    print(f'------------------------------HOME PAGE-------------------------------')
+    print('HOME PAGE'.center(70, '-'))
     msg = f'WELCOME {currentUser.username}'
     print(msg.center(70, '-'))
     print('-' * 70)
+    next_action()
 
 
 def next_action():
@@ -52,19 +56,21 @@ def view_packs():
     next_action()
 
 
-def book_pack():
+def book_pack():  # Payment yet to be incorporated
     id = int(input('Enter id of Travel Package: '))
     if id not in all_packs.id.values:
         print('Invalid id, no such package exists')
+    elif id in currentUser.active_packs:
+        print('You already have the pack in your account')
     else:
         user_addpack(id)
         print('Added pack to your account successfully')
-    print('\n' * 3)
+    print('\n' * 2)
     next_action()
 
 
 def visit_profile():
-    pass
+    UserProfile.init(currentUser)
 
 
 def user_addpack(id):
@@ -72,5 +78,5 @@ def user_addpack(id):
     currentUser.addpack(id)
 
 
-welcome()
-next_action()
+if __name__ == '__main__':
+    welcome()
