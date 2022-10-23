@@ -3,12 +3,11 @@ import mysql.connector
 
 
 def execute_sql(query):
-    # actually for reading sql and returning output
-
+    # actually for executing general query -- DOES NOT return anything
     conn = mysql.connector.connect(
         host='localhost',
         user='root',
-        passwd='root',
+        passwd='lel im not giving it here',
         database='IPproject_test'
     )
     cursor = conn.cursor()
@@ -24,11 +23,10 @@ def execute_sql(query):
 
 def get_data_from_table(query):
     # actually for reading sql and returning output
-
     conn = mysql.connector.connect(
         host='localhost',
         user='root',
-        passwd='root',
+        passwd='sem as abv',
         database='IPproject_test'
     )
 
