@@ -1,0 +1,5 @@
+src,dest,description,cost,pack_name,id
+paris,london,easyjet - 1.5 hours flight; no halts,5000,parlon01,123601
+seattle,miami,spirit - 6 hours flight; 1 halt - LAS,14000,meami25,256402
+kolkata,mumbai,vistara - 3 hours flight; no halts,8000,bomcal24,731025
+delhi,dubai,air arabia - 4 hours; nonstop,12000,deldub997,363617
