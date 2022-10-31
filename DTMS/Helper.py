@@ -129,15 +129,22 @@ def check_if_exists(database):
 
 # generates a payment prompt
 def payment():
-    card = input('Enter you card number: ')
+    print('redirecting to payment portal... ')
+    add_delay()
+    print('-' * 70)
+    print('PAYMENT PORTAL'.center(70, '-'))
+    print('-' * 70)
+    card = input('Enter you 16 digit card number: ')
     while not validate_card(card, 16):
         card = input('Enter a valid card number: ')
 
-    cvv = input('Enter CVV: ')
+    cvv = input('Enter 3 digit CVV: ')
     while not validate_card(cvv, 3):
         cvv = input('Enter valid cvv number: ')
 
     print('Payment successful')
+    add_delay()
+
 
 
 # validates length and type of card, etc.
