@@ -1,3 +1,6 @@
+import warnings
+warnings.simplefilter(action='ignore', category=UserWarning)
+
 import pandas as pd
 import mysql.connector
 import time
